@@ -1,10 +1,11 @@
 module LabL2;
 
+reg[1:0] a, b, expect;
+reg c;
+wire[1:0] z;
 integer i ,j, k;
-reg a, b, c, expect;
-wire z;
 
-yMux1 mux(z, a, b, c);
+yMux2 mux(z, a, b, c);
 
 initial
 begin
