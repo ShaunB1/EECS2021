@@ -1,17 +1,17 @@
-module LabL1;
+module LabL2;
 
+integer i ,j, k;
 reg a, b, c, expect;
 wire z;
-integer i, j, k;
 
 yMux1 mux(z, a, b, c);
 
 initial
 begin
-    
-    for(i = 0; i < 2; i = i + 1) begin
 
-        for(j = 0; j < 2; j = j + 1) begin
+    for(i = 0; i < 4; i = i + 1) begin
+
+        for(j = 0; j < 4; j = j + 1) begin 
 
             for(k = 0; k < 2; k = k + 1) begin
 
@@ -36,6 +36,5 @@ begin
     $finish;
 
 end
-
 
 endmodule

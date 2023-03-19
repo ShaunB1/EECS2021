@@ -1,13 +1,12 @@
 module yMux1(z, a, b, c);
 
-output z;
 input a, b, c;
-integer i, j, k;
+output z;
 wire notC, upper, lower;
 
-not my_not(notC, c);
-and upperAnd(upper, a, notC);
-and lowerAnd(lower, c, b);
-or my_or(z, upper, lower);
+not not1(notC, c);
+and and1(upper, a, notC);
+and and2(lower, c, b);
+or or1(z, upper, lower);
 
 endmodule
