@@ -20,12 +20,16 @@ begin
 
         expect = c ? b : a;
 
-        if(expect === z) begin
-            $display("PASS: a = %b b = %b c = %b z = %b", a, b, c, z);
-        end
+        // if(expect === z) begin
+        //     $display("PASS: a = %b b = %b c = %b z = %b", a, b, c, z);
+        // end
 
-        else begin
-            $display("PASS: a = %b b = %b c = %b z = %b", a, b, c, z);
+        // else begin
+        //     $display("FAIL: a = %b b = %b c = %b z = %b", a, b, c, z);
+        // end
+
+        if(expect != z) begin
+            $display("FAIL: a = %b b = %b c = %b z = %b", a, b, c, z);
         end
 
     end
