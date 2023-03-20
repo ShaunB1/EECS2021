@@ -9,4 +9,4 @@ and and1(lower1, a, b);
 and and2(lower2, upper1, cin);
 or or1(cout, lower2, lower1);
 
-endmodule;
+endmodule
