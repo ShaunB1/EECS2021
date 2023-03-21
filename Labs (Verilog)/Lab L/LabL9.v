@@ -35,11 +35,11 @@ module LabL9;
                 ok = (expect === z) ? 1 : 0;
 
                 if(ok) begin
-                    $display("PASS (AND): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("PASS (AND): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
 
                 else begin
-                    $display("FAIL (AND): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("FAIL (AND): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
                 
             end
@@ -53,11 +53,11 @@ module LabL9;
                 ok = (expect === z) ? 1 : 0;
 
                 if(ok) begin
-                    $display("PASS (OR): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("PASS (OR): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
 
                 else begin
-                    $display("FAIL (OR): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("FAIL (OR): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
 
             end
@@ -71,11 +71,11 @@ module LabL9;
                 ok = (ok) ? 1 : 0;
 
                 if(expect === z) begin
-                    $display("PASS (ADD): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("PASS (ADD): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
                 
                 else begin
-                    $display("FAIL (ADD): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("FAIL (ADD): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
 
             end
@@ -89,16 +89,14 @@ module LabL9;
                 ok = (expect === z) ? 1 : 0;
 
                 if(ok) begin
-                    $display("PASS (SUB): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("PASS (SUB): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
 
                 else begin
-                    $display("FAIL (SUB): a = %b b = %b a%sb = %b", a, b, operator, z);
+                    $display("FAIL (SUB): a = %b b = %b a %s b = %b", a, b, operator, z);
                 end
                 
             end
-
-
 
         end
 
