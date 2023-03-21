@@ -12,7 +12,7 @@ module yAlu(z, ex, a, b, op);
     
     and and1[31:0](alu_and, a, b);
     or or1[31:0](alu_or, a, b);
-    yArith arith1(alu_arith, cout, a, b, op[2]);
+    yArith arith1[31:0](alu_arith, cout, a, b, op[2]);
     yMux4to1 #(.SIZE(32)) mux1(z, alu_and, alu_or, alu_arith, slt, op[1:0]);
 
 
