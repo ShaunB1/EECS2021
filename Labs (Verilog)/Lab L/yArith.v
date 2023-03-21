@@ -8,9 +8,9 @@ module yArith(z, cout, a, b, ctrl);
     wire[31:0] notB, tmp;
     wire cin;
 
-    assign cin = ctrl;
-    not my_not[31:0](notB, b);
     yMux #(.SIZE(32)) mux(tmp, b, notB, cin);
-    yAdder adder(z, cout, a, tmp, cin);
+    not not1[31:0](notB, b);
+    yAdder adder(z, cout, a, tmp, ctrl);
+    assign cin = ctrl;
     
 endmodule
