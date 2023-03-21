@@ -32,8 +32,13 @@ initial begin
             expect = a3;
         end
 
-        if(expect != z) begin
-            $display("FAIL: a0 = %b a1 = %b a2 = %b  a3 = %b c = %b z = %b", a0, a1, a2, a3, c, z);
+        #1; 
+        if(expect === z) begin
+            $display("PASS: a0 = %b a1 = %b a2 = %b a3 = %b \nc = %b z = %b\n", a0, a1, a2, a3, c, z);
+        end
+
+        else begin
+            $display("FAIL: a0 = %b a1 = %b a2 = %b a3 = %b \nc = %b z = %b\n", a0, a1, a2, a3, c, z);
         end
 
     end
