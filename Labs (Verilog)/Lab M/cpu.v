@@ -188,8 +188,30 @@ module yEX(z, zero, rd1, rd2, imm, op, ALUSrc);
     input ALUSrc;
     wire[31:0] b;
 
-    yMux #(.SIZE(32)) my_mux(b, rd2, imm, ALUSrc);
+    yMux my_mux(b, rd2, imm, AluSrc);
     yAlu my_alu(z, zero, rd1, b, op);
+
+endmodule
+
+module yDM(memOut, exeOut, rd2, clk, MemRead, MemWrite);
+
+    output[31:0] memOut;
+    input[31:0] exeOut, rd2;
+    input clk, MemRead, MemWrite;
+
+    mem data_mem(memOut, exeOut, rd2, clk, MemRead, MemWrite);
+
+endmodule
+
+module yWB(wb, exeOut, memOut, Mem2Reg);
+
+    // yMux(z, a, b, c);
+
+    output[31:0] wb;
+    input[31:0] exeOut, memOut;
+    input Mem2Reg;
+    
+    yMux #(32) my_mux(wb, exeOut, memOut, Mem2Reg);
 
 endmodule
 

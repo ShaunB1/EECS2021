@@ -18,3 +18,9 @@
 @48 FF7FF06F // jal x0, LOOP 
 @4C 02802023 // sw s0, 0x20(x0)
 @50 02A02223 // sw a0, 0x24(x0)
+
+// R-type: add, or
+// I-type: lw, addi
+// SB-type: beq
+// UJ-type: jal
+// S-type: sw
